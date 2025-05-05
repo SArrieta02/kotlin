@@ -11,5 +11,5 @@ fun main(){
                 println("El valor ingresado tiene dos digitos")
             else
                 println("El valor ingresado tiene tres digitos")
-    }
+    } while (valor != 0)
 }
