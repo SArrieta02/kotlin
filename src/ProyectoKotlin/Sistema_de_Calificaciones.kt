@@ -45,8 +45,9 @@ fun main() {
             println("La nota de ${nombres[i]} es: $nota")
             println("La condicion de ${nombres[i]} es : $condicion")
     }
-        //enseñamos la nota más alta y baja y el promedio
+        // sacamos el promedio
         promedio = sumaDenotas / 5
+        //enseñamos la nota más alta y baja y el promedio
         println("El promedio de las notas es: $promedio")
         println("La nota más alta es: $NA")
         println("La nota más baja es: $NB")
