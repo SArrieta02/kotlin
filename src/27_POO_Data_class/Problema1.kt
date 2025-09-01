@@ -22,22 +22,44 @@ Hacer una copia de la lista antes de vender y comparar ambas listas con == para 
 
  Sobreescribir toString() para que devuelva “Butaca #X” seguido de “(libre)” o “(ocupada)”.
 */
-data class cine(var ocupada: Boolean = true){
-    var numero: Int
+import kotlin.random.Random
+
+data class cine(var numero: IntArray = intArrayOf(1, 2, 3, 4, 5)) {
+    var ocupada = BooleanArray(5)
 }
+
 fun main() {
-    var valor: Int = 0
-    val butacas: IntArray
-    butacas = IntArray(5)
     val cine1 = cine()
-    for (i in 0 .. 4){
-        
-        valor = ((Math.random() * 5) + 1).toInt()
-        if ( == valor){
-            cine1.ocupada = true
-            print(cine1)
-        }else{
-            cine1.ocupada = false
+    var valor1: Int = 0
+    var valor2: Int = 0
+    var butacas: IntArray = cine1.numero
+    var ocupadas: BooleanArray = cine1.ocupada
+    if (butacas == cine1.numero && ocupadas == cine1.ocupada) {
+        for (i in 0..4) {
+            butacas[i] = cine1.numero[i]
+        }
+        valor1 = Random.nextInt(1, 6)
+        valor2 = Random.nextInt(1, 6)
+        while (valor1 == valor2) {
+            valor2 = Random.nextInt(1, 6)
+        }
+        for (i in 0..4) {
+            if (butacas[i] == valor1 || butacas[i] == valor2) {
+                ocupadas[i] = true
+            } else {
+                ocupadas[i] = false
+            }
+        }
+        for (i in 0..4) {
+            if (ocupadas[i] == true) {
+                print("Butaca #")
+                print(butacas[i])
+                println(" Esta ocupada")
+            } else {
+                print("Butaca #")
+                print(butacas[i])
+                println(" Esta libre")
+            }
         }
     }
 }
