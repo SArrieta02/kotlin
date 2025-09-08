@@ -12,23 +12,9 @@ enum class Paises(val habitantes: String){
     COSTARICA("5.227.000")
 }
 fun main(){
-    val paises1 = Paises.PANAMA
+
+    val paises1 = Paises.BRAZIL
     println("Pais seleccionado ${paises1.name}")
     println("Sus habitantes son de ${paises1.habitantes}")
 
-    val paises2 = Paises.CANADA
-    println("Pais seleccionado ${paises2.name}")
-    println("Sus habitantes son de ${paises2.habitantes}")
-
-    val paises3 = Paises.MEXICO
-    println("Pais seleccionado ${paises3.name}")
-    println("Sus habitantes son de ${paises3.habitantes}")
-
-    val paises4 = Paises.BRAZIL
-    println("Pais seleccionado ${paises4.name}")
-    println("Sus habitantes son de ${paises4.habitantes}")
-
-    val paises5 = Paises.COSTARICA
-    println("Pais seleccionado ${paises5.name}")
-    println("Sus habitantes son de ${paises5.habitantes}")
 }
