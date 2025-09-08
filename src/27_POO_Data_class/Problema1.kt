@@ -34,6 +34,7 @@ fun main() {
     var valor2: Int = 0
     var butacas: IntArray = cine1.numero
     var ocupadas: BooleanArray = cine1.ocupada
+
     if (butacas == cine1.numero && ocupadas == cine1.ocupada) {
         for (i in 0..4) {
             butacas[i] = cine1.numero[i]
